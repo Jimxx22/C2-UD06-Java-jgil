@@ -25,6 +25,7 @@ public static void main(String[] args) {
 		for(int i=0;i<tam;i++) {
 			Random random = new Random();
 			n=random.nextInt(fi - in) + in;
+			//nos aseguramos que havra un numero terminado en 5 en el array
 			if(termina5(n) && con) {
 				array[i]=n;
 				con=false;
@@ -40,6 +41,7 @@ public static void main(String[] args) {
 	
 	public static void mostrarArray(int[] array) {
 	
+		//mostramos los numeros de la aray que terminan en 5
 		for(int i=0;i<array.length;i++) {
 			if(termina5(array[i])) {
 				System.out.print(array[i]+" ");
@@ -48,7 +50,9 @@ public static void main(String[] args) {
 		
 	}
 	
+	//comprovamos que terminan en 5
 	public static boolean termina5(int n) {
+		//si dividimos entre 10 este numero, i el resto es 5, o el numero directamente ya es 5, sabemos que termina en 5
 		if(n%10==5 || n==5) {
 			return true;
 		}else {
