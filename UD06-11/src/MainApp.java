@@ -20,9 +20,12 @@ public class MainApp {
 		tam=sc.nextInt();
 		
 		int[] array1 = new int[tam];
+		//damos valores a array1
 		array1=rellenarAleatorio(tam);
 		int[] array2 = new int[tam];
+		//copiamos el valor de array1 a aray 2
 		System.arraycopy(array1, 0, array2, 0, tam);
+		//damos nuevos valores en array2
 		array2=rellenarAleatorio(tam);
 				
 		int[] array3 = unirArray(array1, array2);
@@ -32,7 +35,7 @@ public class MainApp {
 		}
 		
 	}
-	
+	//funcion para multiplicar las dos arrays
 	public static int[] unirArray(int[] array1, int[] array2) {
 		int[] arrayM = new int[array1.length];
 		
@@ -43,6 +46,7 @@ public class MainApp {
 		return arrayM;		
 	}
 	
+	// funcion para rellenar una aray con numeros aleatorios
 	public static int[] rellenarAleatorio(int tam) {
 		
 		int[] array = new int[tam];
