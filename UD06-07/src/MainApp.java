@@ -18,7 +18,7 @@ public class MainApp {
 			System.out.println("3-Libras");
 			if(sc.hasNextInt()) {
 				res=sc.nextInt();
-			
+			//decidimos si es Dolar, Yen o Libra
 				switch (res) {
 				case 1:
 					conversor(eur,"D");
@@ -45,6 +45,7 @@ public class MainApp {
 	
 	public static void conversor(Double eur, String cambio) {
 		
+		//switch para saber que ha seleccioando el usuario
 		switch (cambio) {
 		case "L":
 			System.out.println(eur+" Euros es igual a "+(eur*0.86)+" Libras");
