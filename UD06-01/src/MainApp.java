@@ -14,6 +14,7 @@ public class MainApp {
 		System.out.println("3-Cuadrado");
 		res=sc.nextInt();
 		
+		//seleccioanemos de que forma queremos calcular el area
 		switch (res) {
 		case 1:
 			System.out.print("Para calcular el area de un Circulo necessitamos el radio. Introduce el radio: ");
@@ -44,14 +45,19 @@ public class MainApp {
 
 	}
 	
+	//calculamos area circulo
 	public static double circulo( Double radi) {
 		Double res= Math.PI*Math.pow(radi, 2);
 		return res;
 	}
+	
+	//caluclamos area triangulo
 	public static double triangulo(Double base, Double altura) {
 		Double res= (base*altura)/2;
 		return res;
 	}
+	
+	//caluclamos area cuadrado
 	public static double cuadrado(Double lado) {
 		Double res= lado*lado;
 		return res;
