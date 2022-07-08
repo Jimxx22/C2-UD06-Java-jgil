@@ -13,6 +13,7 @@ public class MainApp {
 
 	}
 	
+	//calculamos el factorial
 	public static int factorial(int n) {
 		
 		int con=1;
