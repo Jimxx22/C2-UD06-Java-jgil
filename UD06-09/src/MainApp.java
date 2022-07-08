@@ -20,6 +20,7 @@ public class MainApp {
 		
 		int[] array = new int[tam];
 		
+		//anadimos valores aleatorios de 0 a 9 en la array
 		for(int i=0;i<tam;i++) {
 			Random random = new Random();
 		    array[i]=random.nextInt(fi - in) + in;
@@ -27,7 +28,8 @@ public class MainApp {
 				
 		return array;
 	}
-
+	
+	//mostramos los valores con sus posiciones, i sumamos estos valores
 	public static void mostrarArray(int[] array) {
 		
 		int sum=0;
