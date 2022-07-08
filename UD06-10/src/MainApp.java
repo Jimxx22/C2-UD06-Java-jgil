@@ -26,6 +26,7 @@ public class MainApp {
 			System.out.print("Introduce un numero primo: ");
 			//Si se introduce otra cosa que no sea un numero entero salta error.
 			n=sc.nextInt();	
+			//comprovamos que es primo
 			if(primo(n)) {
 		    	array[i]=n;
 		    }else {
@@ -42,6 +43,7 @@ public class MainApp {
 	
 		int nMayor=0;
 	
+		//leemos toda la array, y guardamos en varibale el valor mas grande
 		for(int i=0;i<array.length;i++) {
 			if(nMayor<array[i]) {
 				nMayor=array[i];
@@ -51,9 +53,11 @@ public class MainApp {
 	
 	}
 	
+	//comprovamos que es primo
 	public static boolean primo(int num) {
 		int i=2;
 		boolean a=true;
+		//en este bucle bsucamos que no haya ningun divisible del numero en concreto
 		while (i<num && a==true) {
 			if(num%i==0) {
 				a=false;
