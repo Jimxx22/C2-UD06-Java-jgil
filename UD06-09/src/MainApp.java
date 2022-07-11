@@ -25,7 +25,7 @@ public class MainApp {
 			Random random = new Random();
 		    array[i]=random.nextInt(fi - in) + in;
 		}
-				
+		sc.close();		
 		return array;
 	}
 	
