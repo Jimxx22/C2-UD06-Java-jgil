@@ -39,6 +39,8 @@ public class MainApp {
 			break;
 		}
 		
+		sc.close();
+		
 		if(area > 0) {
 			System.out.println("El area es: " + area);
 		}
