@@ -34,6 +34,7 @@ public static void main(String[] args) {
 				con2=true;
 			}
 		}
+		sc.close();
 		
 		for(int i=0;i<tam;i++) {
 			Random random = new Random();
