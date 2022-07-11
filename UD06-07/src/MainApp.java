@@ -18,6 +18,7 @@ public class MainApp {
 			System.out.println("3-Libras");
 			if(sc.hasNextInt()) {
 				res=sc.nextInt();
+				sc.close();
 			//decidimos si es Dolar, Yen o Libra
 				switch (res) {
 				case 1:
