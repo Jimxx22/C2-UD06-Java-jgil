@@ -12,6 +12,7 @@ public class MainApp {
 		
 		System.out.print("Vamos a comprovar si el numero que introduzcas es primo o no. Introduce un numero: ");
 		int num=sc.nextInt();
+		sc.close();
 		if(primo(num)) {
 			System.out.println("El numero "+num+" es primo");
 		}else {
