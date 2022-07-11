@@ -10,7 +10,8 @@ public class MainApp {
 		System.out.print("Introduce un numero, vamos a contar las cifras de este: ");
 		if(sc.hasNextInt()) {
 			n=sc.nextInt();
-		
+			sc.close();
+			
 			//comprovamos que es un numero entero
 			if(n>=0) {
 				System.out.println("El numero "+n+" tiene "+contarCifras(n)+" cifras.");
