@@ -14,19 +14,35 @@ public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		int tam;
-		int n;
-		boolean con=true;
+		int n,nT;
+		int j=0;
+		boolean con=true, con2=false;
 
 		System.out.println("Introduce el tamano de la Array: ");
 		tam=sc.nextInt();
 		
 		int[] array = new int[tam];
 		
+		System.out.println("Introduce el numero que quieres que termine: (0-9)");
+		nT=sc.nextInt();
+		
+		while(!con2) {
+			if(nT<0 || nT>9) {
+				System.out.println("ERROR: el numero entrado no esta en los parametros indicados (0-9). Introduce el numero de nuevo: ");
+				nT=sc.nextInt();
+			}else {
+				con2=true;
+			}
+		}
+		
 		for(int i=0;i<tam;i++) {
 			Random random = new Random();
 			n=random.nextInt(fi - in) + in;
+			if(termina(n, nT)) {
+				j++;
+			}
 			//nos aseguramos que havra un numero terminado en 5 en el array
-			if(termina5(n) && con) {
+			if(termina(n,nT) && con) {
 				array[i]=n;
 				con=false;
 			}else if(!con) {
@@ -35,25 +51,34 @@ public static void main(String[] args) {
 				i--;
 			}
 		}
+		
+		int[] array2 = new int[j];
+		
+		for(int i=0;i<tam;i++) {
+			if(termina(array[i], nT)) {
+				j=0;
+				array2[j]=array[i];
+				j++;
+			}
+		}
 				
-		return array;
+		return array2;
 	}
 	
 	public static void mostrarArray(int[] array) {
 	
+		System.out.println("La array final contiene: ");
 		//mostramos los numeros de la aray que terminan en 5
 		for(int i=0;i<array.length;i++) {
-			if(termina5(array[i])) {
 				System.out.print(array[i]+" ");
-			}
 		}	
 		
 	}
 	
 	//comprovamos que terminan en 5
-	public static boolean termina5(int n) {
+	public static boolean termina(int n, int nT) {
 		//si dividimos entre 10 este numero, i el resto es 5, o el numero directamente ya es 5, sabemos que termina en 5
-		if(n%10==5 || n==5) {
+		if(n%10==nT || n==nT) {
 			return true;
 		}else {
 			return false;
