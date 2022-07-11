@@ -8,7 +8,7 @@ public class MainApp {
 		
 		System.out.print("Introduce un numero para calcular el factorial de este: ");
 		n=sc.nextInt();
-		
+		sc.close();
 		System.out.println("El factorial de "+n+" es: "+factorial(n));
 
 	}
