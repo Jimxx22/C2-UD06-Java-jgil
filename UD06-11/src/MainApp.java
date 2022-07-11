@@ -13,11 +13,10 @@ public class MainApp {
 		
 		Scanner sc = new Scanner(System.in);
 		int tam;
-		int n;
-		boolean con=true;
 
 		System.out.println("Introduce el tamano de la Array: ");
 		tam=sc.nextInt();
+		sc.close();
 		
 		int[] array1 = new int[tam];
 		//damos valores a array1
