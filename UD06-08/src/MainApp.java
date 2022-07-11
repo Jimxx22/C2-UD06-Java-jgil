@@ -19,6 +19,7 @@ public class MainApp {
 			//Si se introduce otra cosa que no sea un numero entero salta error.
 			array[i]=sc.nextInt();	
 		}
+		sc.close();
 		System.out.println("La array ya esta llena.");
 		
 		return array;
