@@ -34,6 +34,7 @@ public class MainApp {
 		    	i--;
 		    }
 		}
+		sc.close();
 		System.out.println("La array ya esta llena.");
 				
 		return array;
