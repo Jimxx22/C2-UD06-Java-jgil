@@ -17,7 +17,7 @@ public class MainApp {
 		int ini=sc.nextInt();
 		System.out.print("Ahora el final: ");
 		int fin=sc.nextInt();
-		
+		sc.close();
 		for(int i=0;i<n;i++) {
 			System.out.print(aleatorio(ini, fin)+" ");
 		}
