@@ -9,7 +9,7 @@ public class MainApp {
 		
 		System.out.print("Introduce un numero, este se transofrmara a binario:");
 		n=sc.nextInt();
-		
+		sc.close();
 		System.out.println("El numero "+n+" ha binario es: "+binario(n));
 
 	}
